@@ -4,10 +4,10 @@
 
 # Usage & Installation
     pip3 install blessed
-    git clone https://github.com/Z3NTL3/Zudhia<br>
-    chmod +x *<br>
-    bash color.sh<br>
-    python3 zudhia.z3ntl3 .py -check creditcard/bin<br>
+    git clone https://github.com/Z3NTL3/Zudhia
+    chmod +x *
+    bash color.sh
+    python3 zudhia.z3ntl3 .py -check creditcard/bin
 
 Do not type creditcard or bin numbers with with white spaces otherwise cannot checkup.<br>
 <h3>Run it at a Linux Distrobution!</h3>
