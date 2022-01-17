@@ -73,7 +73,7 @@ try:
     api = f"{gateway_scraper.gateway}{sys.argv[2]}"
 except:
     print(logo)
-    sys.exit(f"\033[1m{coloring.kleur1}U{coloring.kleur2}sa{coloring.kleur3}g{coloring.kleur4}e{coloring.kleur5}:\n{coloring.red}python3 \033[0m{coloring.blue}zudhia.z3ntl3 {coloring.red}-check creditcard/bin")
+    sys.exit(f"\033[1m{coloring.kleur1}U{coloring.kleur2}sa{coloring.kleur3}g{coloring.kleur4}e{coloring.kleur5}:\n{coloring.red}python3 \033[0m{coloring.blue}zudhia.z3ntl3.py {coloring.red}-check creditcard/bin")
 
 def start(process): 
     data = browser.get(api, headers={'Cache-Control': 'no-cache'})
