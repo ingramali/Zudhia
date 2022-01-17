@@ -8,5 +8,5 @@
         chmod +x *<br>
         bash color.sh<br>
         python3 zudhia.z3ntl3 .py -check creditcard/bin<br>
-        
+
         Do not type creditcard or bin numbers with with white spaces otherwise cannot checkup.
