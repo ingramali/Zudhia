@@ -126,8 +126,6 @@ def start(process):
         bank = "No Bankname Available"
 
 
-    
-    valid = "Valid"
     try:
         global phone
         z3ntl3 = load['bank']
@@ -162,7 +160,6 @@ def start(process):
     print(f"""{coloring.kleur4}╔═{coloring.kleur3}══{coloring.kleur2}══{coloring.kleur1}════{coloring.kleur2}════{coloring.kleur3}═══{coloring.kleur4}══{coloring.kleur5}═══{coloring.kleur6}═══{coloring.kleur7}═══{coloring.kleur8}═══{coloring.kleur9}╗
 {coloring.kleur12}║ \033[1m{coloring.kleur1}IN{coloring.kleur2}FOR{coloring.kleur3}MA{coloring.kleur4}TI{coloring.kleur5}ON
 {coloring.kleur13}║  
-{coloring.kleur1}║\033[0m {coloring.kleur9}Validity: \033[0m{coloring.kleur7}{valid}
 {coloring.kleur1}║\033[0m {coloring.kleur9}Card: \033[0m{coloring.kleur7}{card}
 {coloring.kleur2}║\033[0m {coloring.kleur9}Type: \033[0m {coloring.kleur7}{type}
 {coloring.kleur3}║ \033[0m{coloring.kleur9}Prepaid: \033[0m {coloring.kleur7}{prepaid}
