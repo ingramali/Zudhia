@@ -1,4 +1,4 @@
 {
   "comment": "The gateway API will be always updated if one is taken down another will come. The tool uses this json to get what api it will use",
-  "gateway": ""
+  "gateway": "https://lookup.binlist.net/"
 }
