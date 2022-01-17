@@ -56,7 +56,7 @@ class gateway_scraper:
         gateway = conn['gateway']
 
 def detector():
-    d = subprocess.getoutput("echo $TERM")
+    d = sp.getoutput("echo $TERM")
 
     while True:
         if d == "xterm-256color":
