@@ -57,7 +57,17 @@ class gateway_scraper:
         conn = json.loads(file)
         gateway = conn['gateway']
 
-    
+def detector():
+    d = subprocess.getoutput("echo $TERM")
+
+    while True:
+        if d == "xterm-256color":
+            break
+        else:
+            clear()
+            print(f"\033[31mYour Terminal Does not Support 256 Color RGB\n\nTo FIX:\n> sudo apt install xterm\n>export TERM=xterm256-color\n\n")
+            sys.exit()
+            
 logo = f"""
        {coloring.kleur9}╔\033[0m{coloring.kleur9}═\033[0m{coloring.kleur9}╗\033[0m{coloring.kleur9}╦ ╦╔╦╗╦ ╦╦╔═╗
        {coloring.kleur8}╔{coloring.kleur8}═{coloring.kleur8}╝\033[0m{coloring.kleur8}║ ║ ║║╠═╣║╠═╣
@@ -166,6 +176,7 @@ def start(process):
 
 """)
 if __name__ == '__main__':
+    detector()
     start_check = th.Thread(target=start(api))   
     start_check.start()
     start_check.join()
