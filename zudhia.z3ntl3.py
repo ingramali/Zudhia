@@ -46,9 +46,7 @@ class coloring:
     blue = terminal.color_rgb(108, 204, 245)
     
 class gateway_scraper:
-    
     try:
-        
         connection = browser.get("https://raw.githubusercontent.com/Z3NTL3/Zudhia/main/always-updated-api-gateways.json", headers={'Cache-Control': 'no-cache'}, timeout=20)
         conn = json.loads(connection.text)
         gateway = conn['gateway']
