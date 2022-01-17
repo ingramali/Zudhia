@@ -112,7 +112,7 @@ def start(process):
         prepaid = "No Prepaid"
 
     try:
-        global countr
+        global country
         z3ntl3 = load['country']
         country = z3ntl3['name']
     except:
