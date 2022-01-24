@@ -11,3 +11,6 @@
 
 Do not type creditcard or bin numbers with with white spaces otherwise cannot checkup.<br>
 <h3>Run it at a Linux Distrobution!</h3>
+
+# Logging
+Look in your ``logs.log`` file for any runtime INFO,ERROR,WARNING,CRITICAL message and to get info how to solve them.
