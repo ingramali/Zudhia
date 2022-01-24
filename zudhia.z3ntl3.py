@@ -9,6 +9,10 @@ import time
 import sys
 import subprocess as sp
 import json
+import logging
+
+logging.basicConfig(filename='logs.log', encoding='utf-8',format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+
 
 try:
     import blessed as colorful
@@ -54,6 +58,8 @@ class gateway_scraper:
         file = open('always-updated-api-gateways.json','r')
         conn = json.loads(file)
         gateway = conn['gateway']
+        logging.warning('Cannot connect to the online API')
+        logging.warning('Solved the connection timeout by running the local JSON file which contains the API gateway')
 
 def detector():
     d = sp.getoutput("echo $TERM")
@@ -64,6 +70,7 @@ def detector():
         else:
             clear()
             print(f"\033[31mYour Terminal Does not Support 256 Color RGB\n\nTo FIX:\n> sudo apt install xterm\n>export TERM=xterm256-color\n\n")
+            logging.critical('Please install Python3 blessed module!')
             sys.exit()
             
 logo = f"""
@@ -80,6 +87,8 @@ try:
     sys.argv[1] = "-check"
     api = f"{gateway_scraper.gateway}{sys.argv[2]}"
 except:
+    logging.critical('Error running the script!')
+    logging.info('Run the script like python3 zudhia.z3ntl3.py -check bin/creditcard WITHOUT any WHITE Spaces on bin/creditcard value')
     print(logo)
     sys.exit(f"\033[1m{coloring.kleur1}U{coloring.kleur2}sa{coloring.kleur3}g{coloring.kleur4}e{coloring.kleur5}:\n{coloring.red}python3 \033[0m{coloring.blue}zudhia.z3ntl3.py {coloring.red}-check creditcard/bin")
 
@@ -88,6 +97,7 @@ def start(process):
     try:
         load = json.loads(data.text)
     except:
+        logging.critical('API Downtime!')
         clear()
         print(logo)
         sys.exit(f"{coloring.kleur1}[ {coloring.kleur9}Err{coloring.kleur8}or {coloring.kleur7}can{coloring.kleur6}not {coloring.kleur5}con{coloring.kleur4}nect{coloring.kleur3} to {coloring.kleur2}API {coloring.kleur1}]\033[0m")
