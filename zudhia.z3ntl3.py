@@ -11,7 +11,7 @@ import subprocess as sp
 import json
 import logging
 
-logging.basicConfig(filename='logs.log', encoding='utf-8',format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+logging.basicConfig(filename='logs.log', level=logging.DEBUG,format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 
 
 try:
